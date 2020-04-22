@@ -1,0 +1,474 @@
+<!--
+
+
+█▀▄▀█ █   █░█ ▄▀█ █   ▀█▀ █▀█ █▀█ █░█ ▄▀█ ▀█▀ █▀█ █ █
+█░▀░█ █   █▀█ █▀█ █   ░█░ █▀▄ █▄█ ▀▄▀ █▀█ ░█░ █▄█ ▄ ▄
+
+Ebbene, sono sempre alla ricerca di progetti freelance.
+
+Vuoi saperne di piu' su di me?
+
+==> https://www.linkedin.com/in/dpanada/
+
+
+█▄█ █▀█ █░█   █▀▀ █▀█ █░█ █▄░█ █▀▄   █▀▄▀█ █▀▀ █ █
+░█░ █▄█ █▄█   █▀░ █▄█ █▄█ █░▀█ █▄▀   █░▀░█ ██▄ ▄ ▄
+
+Why not hire me?
+
+==> https://www.linkedin.com/in/dpanada/
+-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.17.6/docxtemplater.js"></script>
+    <script src="https://unpkg.com/pizzip@3.0.6/dist/pizzip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+    <script src="https://unpkg.com/pizzip@3.0.6/dist/pizzip-utils.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!--[if IE]>
+    <script type="text/javascript" src="https://unpkg.com/pizzip@3.0.6/dist/pizzip-utils-ie.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-light fixed-top navbar-custom">
+        <a class="navbar-brand" href="index.html">Autocertificazione Online</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="navbar-nav nav w-100">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="legal.html">Note Legali</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/dpanada/" target="_blank">Su di Me</a>
+                </li>
+            </ul>
+    </div>
+</nav>
+
+
+
+
+<div class="container">
+    <span>
+
+        <h2>Autocertificazione Online</h2>
+
+        Benvenuti nel sistema automatizzato generazione autocertificazione spostamenti. Compilate i campi per ottenere
+        la vostra autocertificazione.
+        <br/><br/>
+        Vi ricordiamo che la normativa vigente non consente la presentazione di autocertificazioni elettroniche.
+        <strong>Pertanto, il documento generato dovra' essere stampato.</strong>
+        <br/><br/>
+        Le informazioni inserite nel modulo non sono salvate sui nostri server o trasferite a terzi.
+        Tutte le infomazioni inserite sono distrutte alla chiusura della pagina, a meno che il vostro browser non ne
+        salvi una copia locale sul vostro computer. Il codice dell'applicazione e' disponibile
+        <a href="https://github.com/DarioPanada/autocertificazione-covid-italia" target="_blank">su GitHub</a>.
+        <br/><br/>
+
+
+    </span>
+    <form id="autodichiarazione_form">
+        <!-- Dati Anagrafici -->
+        <div class="row">
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+            </div>
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="surname">Cognome</label>
+                    <input type="text" name="surname" class="form-control" id="surname" required>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="dob">Data di Nascita</label>
+            <input type="date" name="dob" class="form-control" id="dob" required>
+        </div>
+
+        <!-- Luogo di Nascita -->
+        <div class="row">
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="ldn">Luogo di Nascita</label>
+                    <input type="text" name="ldn" class="form-control" id="ldn" required>
+                </div>
+            </div>
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="cdn">Comune di Nascita</label>
+                    <input type="text" name="cdn" class="form-control" id="cdn" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Luogo di Residenza -->
+        <div class="row">
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="ldr">Luogo di Residenza</label>
+                    <input type="text" name="ldr" class="form-control" id="ldr" required>
+                </div>
+            </div>
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="cdr">Comune di Residenza</label>
+                    <input type="text" name="cdr" class="form-control" id="cdr" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Domiciliato -->
+        <div class="row">
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="dp">Domiciliato Presso</label>
+                    <input type="text" name="dp" class="form-control" id="dp" required>
+                </div>
+            </div>
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="cpd">Comune Presso cui Domiciliato</label>
+                    <input type="text" name="cpd" class="form-control" id="cpd" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documento di Identita' -->
+        <div class="row">
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="iam">Identificato a Mezzo</label>
+                    <input type="text" name="iam" class="form-control" id="iam" required>
+                    <small id="iamHelpBlock" class="form-text text-muted">Carta d'identita', Passaporto...</small>
+                </div>
+            </div>
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="iamn">Numero</label>
+                    <input type="text" name="iamn" class="form-control" id="iamn" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="rd">Rilasciato Da</label>
+                    <input type="text" name="rd" class="form-control" id="rd" required>
+                    <small id="rdHelpBlock" class="form-text text-muted">Comune di, Anagrafe di...</small>
+                </div>
+            </div>
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="rdid">In Data</label>
+                    <input type="date" name="rdid" class="form-control" id="rdid" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="ut">Utenza Telefonica</label>
+                    <input type="text" name="ut" class="form-control" id="ut" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spostamento -->
+        <div class="row">
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="idp">Indirizzo di Partenza</label>
+                    <input type="text" name="idp" class="form-control" id="idp" required>
+                </div>
+            </div>
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="ida">Indirizzo di Arrivo</label>
+                    <input type="text" name="ida" class="form-control" id="ida" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Regioni di Spostamento -->
+        <div class="row">
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="rdp">Regione di Partenza</label>
+                    <input type="text" name="rdp" class="form-control" id="rdp" required>
+                </div>
+            </div>
+            <div class="col-l-12 col-sm-6">
+                <div class="form-group">
+                    <label for="rda">Regione di Arrivo</label>
+                    <input type="text" name="rda" class="form-control" id="rda" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="form-group">
+                    <label for="cds">Causa di Spostamento</label>
+                    <input type="text" name="cds" class="form-control" id="cds">
+                    <small id="cds_helper" class="form-text text-muted">Opzionale</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Motivo di Spostamento -->
+        <div class="row">
+            <div class="col-lg-12">
+                <label>Motivo dello Spostamento</label>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="mds" id="mds_lav" value="lav" required checked>
+                    <label class="form-check-label" for="mds_lav">
+                        Comprovate esigenze lavorative;
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="mds" id="mds_au" value="au">
+                    <label class="form-check-label" for="mds_au">
+                        Assoluta urgenza (per trasferimenti in comune diverso);
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="mds" id="mds_nec" value="nec">
+                    <label class="form-check-label" for="mds_nec">
+                        Situazione di necessità (per spostamenti all’interno dello stesso comune o che rivestono
+                        carattere di quotidianità o che, comunque, siano effettuati abitualmente in ragione della
+                        brevità delle distanze da percorrere);
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="mds" id="mds_sal" value="sal">
+                    <label class="form-check-label" for="mds_sal">
+                        Motivi di salute.
+                    </label>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-l-12 col-sm-6">
+                    <div class="form-group">
+                        <label for="ultdic">Ulteriore Dichiarazione</label>
+                        <input type="text" name="ultdic" class="form-control" id="ultdic" required>
+                        <small id="cdshelper" class="form-text text-muted">Specificare i motivi dello spostamento
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br/>
+        <br/>
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="veridicita" required>
+                    <label class="form-check-label" for="veridicita">
+
+                        ATTESTO LA VERIDICITÀ E L'ESATTEZZA DEI DATI RIPORTATI NEL MODULO
+
+                    </label>
+                </div>
+
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="su_carta" required>
+                    <label class="form-check-label" for="su_carta">
+
+                        SONO CONSAPEVOLE CHE LA NORMATIVA ATTUALMENTE VIGENTE NON PERMETTE DI USUFRUIRE DI
+                        AUTODICHIARAZIONI IN FORMATO ELETTRONICO. SONO PERTANTO CONSAPEVOLE CHE IL DOCUMENTO
+                        GENERATO DA QUESTA APP <strong>DOVRA' ESSERE STAMPATO SU CARTA</strong> E NON POTRA' ESSERE
+                        PRESENTATO
+                        SULLO SCHERMO DI CELLULARI/TABLET/COMPUTER/ETC.
+
+                    </label>
+                </div>
+
+            </div>
+        </div>
+        <br/>
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="licenza" required>
+                    <label class="form-check-label" for="licenza">
+
+                        ACCETTO I TERMINI DI UTILIZZO: IL SOFTWARE È FORNITO "COSÌ COM'È", SENZA ALCUN TIPO DI GARANZIA,
+                        ESPRESSA O IMPLICITA, COMPRESO MA NON LIMITATO ALLE GARANZIE DI COMMERCIABILITÀ, IDONEITÀ A UNO
+                        SCOPO PARTICOLARE E SENZA VIOLAZIONE. IN NESSUN CASO GLI AUTORI OI TITOLARI DEL COPYRIGHT
+                        SARANNO RESPONSABILI DI QUALSIASI RECLAMO, DANNO O ALTRO RESPONSABILITÀ, SE IN AZIONE DI
+                        CONTRATTO, TORT O ALTRO, DERIVANTE DA, FUORI O IN CONNESSIONE CON IL SOFTWARE O L'UTILIZZO O
+                        ALTRE OFFERTE NEL SOFTWARE
+
+                    </label>
+                </div>
+
+            </div>
+        </div>
+        <br/>
+        <span class="err-msg">Il Modulo Presenta degli Errori! Vedi i campi evidenziati in rosso</span>
+        <br/>
+        <submit id="submit" class="btn btn-success">CREA AUTODICHIARAZIONE</submit>
+
+
+    </form>
+
+
+</div>
+<a href="https://www.buymeacoffee.com/dashma" target="_blank">
+<div class="coffee-holder">
+
+    <div class="coffee"></div>
+
+    <br/><strong>Ti piace? Offrimi un caffe'! :)</strong>
+</div>
+</a>
+
+
+</body>
+<script>
+
+    $("input").click(function () {
+        $(this).removeClass("is-invalid");
+
+    });
+
+    $("#submit").click(function (e) {
+        let form = $("#autodichiarazione_form");
+        if (!form[0].checkValidity()) {
+            $("input:required").filter(function () {
+                return !this.value;
+            }).addClass("is-invalid");
+
+            $("input:checkbox:not(:checked)").addClass("is-invalid");
+
+            console.log($("input[name=mds]").val());
+
+            $(".err-msg").show();
+            justSubmitted = true;
+            return;
+        }
+
+        let form_content = form.serializeArray();
+
+        let template_values = {};
+
+        form_content.forEach((x) => template_values[x.name] = x.value);
+
+        let dob = template_values["dob"].split("-");
+        template_values["dob_day"] = dob[0];
+        template_values["dob_month"] = dob[1];
+        template_values["dob_year"] = dob[2];
+
+        let rdid = template_values["rdid"].split("-");
+        template_values["rdid_day"] = rdid[0];
+        template_values["rdid_month"] = rdid[1];
+        template_values["rdid_year"] = rdid[2];
+
+        if (template_values["mds"] == "lav") {
+            template_values["mds_text"] = "Comprovate esigenze lavorative."
+        } else if (template_values["mds"] == "au") {
+            template_values["mds_text"] = "Assoluta urgenza (per trasferimenti in comune diverso)."
+        } else if (template_values["mds"] == "nec") {
+            template_values["mds_text"] = "Situazione di necessità (per spostamenti all’interno dello stesso comune o che rivestono\n" +
+                "       carattere di quotidianità o che, comunque, siano effettuati abitualmente in ragione della\n" +
+                "brevità delle distanze da percorrere);"
+        } else if (template_values["mds"] == "sal") {
+            template_values["mds_text"] = "Motivi di salute.";
+        }
+
+        generate(template_values);
+    });
+
+
+    function loadFile(url, callback) {
+        PizZipUtils.getBinaryContent(url, callback);
+    }
+
+    function generate(data) {
+        loadFile("template.docx", function (error, content) {
+            if (error) {
+                throw error
+            }
+            ;
+
+            function replaceErrors(key, value) {
+                if (value instanceof Error) {
+                    return Object.getOwnPropertyNames(value).reduce(function (error, key) {
+                        error[key] = value[key];
+                        return error;
+                    }, {});
+                }
+                return value;
+            }
+
+            function errorHandler(error) {
+                console.log(JSON.stringify({error: error}, replaceErrors));
+
+                if (error.properties && error.properties.errors instanceof Array) {
+                    const errorMessages = error.properties.errors.map(function (error) {
+                        return error.properties.explanation;
+                    }).join("\n");
+                    console.log('errorMessages', errorMessages);
+                }
+                throw error;
+            }
+
+            var zip = new PizZip(content);
+            var doc;
+            try {
+                doc = new window.docxtemplater(zip);
+            } catch (error) {
+                errorHandler(error);
+            }
+
+            doc.setData(data);
+            try {
+                doc.render();
+            } catch (error) {
+                errorHandler(error);
+            }
+
+            var out = doc.getZip().generate({
+                type: "blob",
+                mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            }) //Output the document using Data-URI
+            saveAs(out, "dichiarazione.docx")
+        })
+    }
+</script>
+</html>

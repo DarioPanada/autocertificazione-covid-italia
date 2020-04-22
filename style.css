@@ -1,0 +1,43 @@
+.touched:invalid {
+    border-color: red;
+    color: red;
+}
+
+.err-msg {
+    color: red;
+    display: none;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.navbar-custom {
+
+    background-color: black !important;
+}
+
+.navbar-custom>a {
+    color: white !important;
+}
+
+a.nav-link {
+    color: white !important;
+}
+
+.coffee{
+    height: 50px;
+    width: 50px;
+    background: url("imgs/coffee.jpeg");
+    background-size: 50px 50px;
+    display: inline-block;
+
+}
+
+.coffee-holder {
+    position: sticky;
+    bottom: 20px;
+    margin-left: 50px;
+    border-color: black;
+
+}
