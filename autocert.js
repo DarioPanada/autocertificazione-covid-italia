@@ -3,6 +3,14 @@ $("input").click(function () {
 
 });
 
+function waitToSubmit() {
+    $("#submit").attr("disabled", true).prop("value", "Creazione in corso...");
+}
+
+function canSubmit() {
+    $("#submit").attr("disabled", false).prop("value", "CREA AUTODICHIARAZIONE");
+}
+
 $("#submit").click(function (e) {
     let form = $("#autodichiarazione_form");
     if (!form[0].checkValidity()) {
@@ -18,6 +26,8 @@ $("#submit").click(function (e) {
         justSubmitted = true;
         return;
     }
+    waitToSubmit();
+    setTimeout(canSubmit, 3000);
 
     let form_content = form.serializeArray();
 
