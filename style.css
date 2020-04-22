@@ -35,9 +35,11 @@ a.nav-link {
 }
 
 .coffee-holder {
+    background-color: white;
     position: sticky;
+    left: 80%;
     bottom: 20px;
-    margin-left: 50px;
-    border-color: black;
+    width: 150px;
+
 
 }
