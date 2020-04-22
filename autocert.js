@@ -57,7 +57,11 @@ $("#submit").click(function (e) {
         template_values["mds_text"] = "Motivi di salute.";
     }
 
-    generate(template_values);
+    try {
+        generate(template_values);
+    } catch (e) {
+        $(".failure").html(e.toString()).show();
+    }
 });
 
 

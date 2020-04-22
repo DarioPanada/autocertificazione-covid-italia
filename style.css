@@ -3,7 +3,7 @@
     color: red;
 }
 
-.err-msg {
+.err-msg, .failure {
     color: red;
     display: none;
 }
